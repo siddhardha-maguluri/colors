@@ -1,6 +1,6 @@
 # Colorful Logging in Go
 
-This is a simple module that allows you to print text in the color of your choice in Go.
+This is a simple module developed in Go that allows you to print text in different colors depending on the type of text. for example, the error text can be displayed in red, info text in blue etc.,
 
 ## Installation
 
