@@ -1,4 +1,4 @@
-package main
+package logger
 
 var TEXT_COLORS = map[string]string{
 	"BLACK":  "\033[0m",
