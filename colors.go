@@ -1,9 +1,20 @@
-package logger
+package colors
 
-var TEXT_COLORS = map[string]string{
-	"BLACK":  "\033[0m",
-	"RED":    "\033[31m",
-	"GREEN":  "\033[32m",
-	"YELLOW": "\033[33m",
-	"BLUE":   "\033[34m",
+import "fmt"
+
+type Log struct{}
+
+// Use to display the error messages in red color
+func (l *Log) Error(message string) {
+	fmt.Printf("%s%s%s", TEXT_COLORS["RED"], message, TEXT_COLORS["BLACK"])
+}
+
+// Use to display the warning messages in yellow color
+func (l *Log) Warn(message string) {
+	fmt.Printf("%s%s%s", TEXT_COLORS["YELLOW"], message, TEXT_COLORS["BLACK"])
+}
+
+// Use to display the info messages in blue color
+func (l *Log) Info(message string) {
+	fmt.Printf("%s%s%s", TEXT_COLORS["BLUE"], message, TEXT_COLORS["BLACK"])
 }
